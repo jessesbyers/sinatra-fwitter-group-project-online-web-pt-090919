@@ -31,7 +31,6 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     @user = User.find_by(email: params[:email], password: params[:password])
-    binding.pry
     if @user
       session[:user_id] = @user.id
       redirect '/tweets'
