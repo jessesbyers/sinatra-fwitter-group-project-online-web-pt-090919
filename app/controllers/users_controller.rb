@@ -63,13 +63,3 @@ end
       redirect '/login'
     end
   end
-
-  # get "/users/#{:slug}" do
-  #   binding.pry
-  #   if Helpers.logged_in?(session)
-  #     @user = User.find_by_slug(user.slug)
-  #     erb :'users/show'
-  #   else
-  #     redirect '/login'
-  #   end
-  # end
