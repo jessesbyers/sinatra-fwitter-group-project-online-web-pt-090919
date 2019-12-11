@@ -55,14 +55,14 @@ class UsersController < ApplicationController
   end
 end
 
-  # get '/users/:id' do
-  #   if Helpers.logged_in?(session)
-  #     @user = User.find_by_id(params[:id])
-  #     erb :'users/show'
-  #   else
-  #     redirect '/login'
-  #   end
-  # end
+  get '/users/:id' do
+    if Helpers.logged_in?(session)
+      @user = User.find_by_id(params[:id])
+      erb :'users/show'
+    else
+      redirect '/login'
+    end
+  end
 
   # get "/users/#{:slug}" do
   #   binding.pry
