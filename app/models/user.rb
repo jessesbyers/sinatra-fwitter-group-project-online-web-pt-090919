@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :tweets
 
   def slug
-    User.find(id).username.gsub(" ", "-")
+    User.find(id).username.gsub(" ", "-").downcase
   end
 
   def self.find_by_slug(slug)
