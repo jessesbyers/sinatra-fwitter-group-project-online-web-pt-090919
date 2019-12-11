@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     end
   end
 
-  get "/users/#{user.slug}"
+  get "/users/#{user.slug}" do
     if Helpers.logged_in?(session)
       @user = User.find_by_slug(slug)
       erb :'users/show'
