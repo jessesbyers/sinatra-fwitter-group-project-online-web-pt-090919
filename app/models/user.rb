@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   def slug
     User.find(id).username.gsub(" ", "-")
+    binding.pry
   end
 
   def self.find_by_slug(slug)
