@@ -53,6 +53,7 @@ class UsersController < ApplicationController
       redirect '/login'
     end
   end
+end
 
   # get '/users/:id' do
   #   if Helpers.logged_in?(session)
@@ -72,4 +73,3 @@ class UsersController < ApplicationController
   #     redirect '/login'
   #   end
   # end
-end
