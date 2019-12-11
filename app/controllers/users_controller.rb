@@ -50,12 +50,3 @@ class UsersController < ApplicationController
       erb :'users/show'
   end
 end
-
-  # get '/users/:id' do
-  #   if Helpers.logged_in?(session)
-  #     @user = User.find_by_id(params[:id])
-  #     erb :'users/show'
-  #   else
-  #     redirect '/login'
-  #   end
-  # end
