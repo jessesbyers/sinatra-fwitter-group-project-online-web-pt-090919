@@ -8,5 +8,6 @@ class User < ActiveRecord::Base
 
   def self.find_by_slug(slug)
     User.find_by(slug)
+    binding.pry
   end
 end
