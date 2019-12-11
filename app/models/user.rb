@@ -6,8 +6,12 @@ class User < ActiveRecord::Base
     User.find(id).username.gsub(" ", "-").downcase
   end
 
+  # def self.find_by_slug(slug)
+  #   User.find_by(slug)
+  #   binding.pry
+  # end
+
   def self.find_by_slug(slug)
-    User.find_by(slug)
-    binding.pry
-  end
+  self.all.find{ |instance| instance.slug == slug }
+end
 end
